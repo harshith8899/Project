@@ -1,6 +1,5 @@
 import random
 import os
-#import sys
 
 from game_data import sports_data
 from game_data import actors_data 
@@ -31,9 +30,11 @@ def higher_lower():
     person1 = assign()
     person2 = assign()
 
-    print(person1)
-    print(person2)
-
+    while(person1 == person2):
+        person2 = assign()
+    print(f"Name: {person1['name']}, Desc: {person1['description']}")
+    print(vs)
+    print(f"Name: {person2['name']}, Desc: {person2['description']}")
 
 user_choice = input("Start Game(y/n)\n")
 
