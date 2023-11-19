@@ -7,8 +7,8 @@ from game_data import actors_data
 from art import vs
 from art import logo
 
-def assign(category):
-    temp = 1
+def assign():
+    temp = 2
     if temp == 1:
         return random.choice(sports_data)
     elif temp == 2:
@@ -32,16 +32,44 @@ def compare(p1,p2,user_ans):
 
 def higher_lower():
 
-    print(logo)
-    category = input("Choose the category\n 1.Sports\n 2.Film\n")
-    person1 = assign(category)
-    person2 = assign(category)
-    #while(person1 == person2):
-    #   person2 = assign()
+    playing_game = True
+    while(playing_game):
+        score = 0
+        guessing = True
+        while(guessing):
 
-    print(f"Name: {person1['name']}, Desc: {person1['description']}")
-    print(vs)
-    print(f"Name: {person2['name']}, Desc: {person2['description']}")
+            os.system('cls')
+            print(logo)
+            #category = input("Choose the category\n 1.Sports\n 2.Film\n")
+            person1 = assign()
+            person2 = assign()
+            while(person1 == person2):
+                person2 = assign()
+
+            print(f"Name: {person1['name']}, Desc: {person1['description']}")
+            print(vs)
+            print(f"Name: {person2['name']}, Desc: {person2['description']}")
+
+            user_ans = input("Enter Your Answer:")
+            if compare(person1,person2,user_ans):
+                score+= 1
+                print("Current Score: ", score)
+            else:
+                print("You got it Wrong!")
+                guessing = False
+            
+            play_again = input("Continue(y/n)\n")
+            if play_again == 'y':
+                continue
+            elif play_again == 'n':
+                playing_game = False
+                os.system('cls')
+                print("Your Score: ",score)
+                print("Game Exited Successfully!")
+            else:
+                print("Invalid Input")
+                playing_game = False
+
 
 user_choice = input("Start Game(y/n)\n")
 
