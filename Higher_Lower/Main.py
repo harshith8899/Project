@@ -25,7 +25,7 @@ def compare(p1,p2,user_ans):
     elif followers2 > followers1:
         ans = p2['name']
     
-    if ans == user_ans:
+    if ans.lower() == user_ans.lower():
         return True
     else:
         return False
@@ -50,7 +50,8 @@ def higher_lower():
             print(vs)
             print(f"Name: {person2['name']}, Desc: {person2['description']}")
 
-            user_ans = input("Enter Your Answer:")
+            user_ans = input("Enter Your Answer:").strip()
+            
             if compare(person1,person2,user_ans):
                 score+= 1
                 print("Current Score: ", score)
