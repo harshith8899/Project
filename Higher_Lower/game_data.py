@@ -13,6 +13,16 @@ sports_data = [ {
     'name' : 'Neymar Jr',
     'follower_count' : 215,
     'description' : 'Footballer'
+},
+{
+    'name' : 'MS Dhoni',
+    'follower_count' : 46,
+    'description' : 'Cricketer'
+},
+{
+    'name' : 'Virat Kholi',
+    'follower_count' : 276,
+    'description' : 'Cricketer'
 }
 ]
 
