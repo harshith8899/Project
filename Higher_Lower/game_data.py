@@ -20,7 +20,7 @@ sports_data = [ {
     'description' : 'Cricketer'
 },
 {
-    'name' : 'Virat Kholi',
+    'name' : 'Virat Kohli',
     'follower_count' : 276,
     'description' : 'Cricketer'
 }

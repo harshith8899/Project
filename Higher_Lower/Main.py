@@ -8,7 +8,7 @@ from art import vs
 from art import logo
 
 def assign():
-    temp = 2
+    temp = 1
     if temp == 1:
         return random.choice(sports_data)
     elif temp == 2:
